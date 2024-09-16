@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { Lightbulb, DollarSign, Brain, Headphones, Footprints, FlaskRound, Code, BoxIcon, Trophy, Dna, Users, Smile, Mail, Cake, Search, Wand2, LinkIcon } from "lucide-react"
+import { Lightbulb, DollarSign, Brain, Headphones, Footprints, FlaskRound, Code, BoxIcon, Trophy, Dna, Users, Smile, Mail, Cake, Search, Wand2, LinkIcon, MessageSquare } from "lucide-react"
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -30,130 +30,139 @@ const projects: Project[] = [
         title: "DigibizIndia💡",
         desc: "Helps businesses digitize by creating an online presence for their products or services, without being an e-commerce platform. It simply provides a link to showcase products or services online.",
         icon: <Lightbulb className="h-4 w-4" />,
-        status: "ENHANCING"
-        , link: ""
+        status: "ENHANCING",
+        link: "https://digibiz.doingsomethings.online/"
     },
     {
         id: 2,
         title: "EarnRupee 💰",
         desc: "Referral-based earning platform where users can earn money by referring others.",
-        icon: <DollarSign className="h-4 w-4" />
-        , status: "ENHANCING"
-        , link: ""
+        icon: <DollarSign className="h-4 w-4" />,
+        status: "ENHANCING",
+        link: "https://earnrupee.doingsomethings.online/"
     },
     {
         id: 3,
-        title: "GetReady 🤔💭",
-        desc: "App for students, focusing on helping them become experts in their studies by solving objective and subjective questions based on their school syllabus.",
-        icon: <Brain className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Social Media AI Manager 🤖",
+        desc: "AI-powered platform for managing multiple social media accounts, automating post scheduling, and creating engaging content using artificial intelligence.",
+        icon: <MessageSquare className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 4,
-        title: "Make ur playlist 🎧",
-        desc: "Allows users to create and organize their playlists, specifically using YouTube videos.",
-        icon: <Headphones className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "GetReady 🤔💭",
+        desc: "App for students, focusing on helping them become experts in their studies by solving objective and subjective questions based on their school syllabus.",
+        icon: <Brain className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 5,
-        title: "Tracker 🐾",
-        desc: "Helps users track their daily activities and monitor their productivity.",
-        icon: <Footprints className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Make ur playlist 🎧",
+        desc: "Allows users to create and organize their playlists, specifically using YouTube videos.",
+        icon: <Headphones className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 6,
-        title: "Disease 🤧",
-        desc: "Database that provides a list of diseases, their symptoms, and recommended medicines.",
-        icon: <FlaskRound className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Tracker 🐾",
+        desc: "Helps users track their daily activities and monitor their productivity.",
+        icon: <Footprints className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 7,
-        title: "JS libraries </>",
-        desc: "Listing JavaScript libraries that can be beneficial for developers working on various projects.",
-        icon: <Code className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Disease 🤧",
+        desc: "Database that provides a list of diseases, their symptoms, and recommended medicines.",
+        icon: <FlaskRound className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 8,
-        title: "Components 🧊",
-        desc: "Web components that developers can easily copy and paste into their projects.",
-        icon: <BoxIcon className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "JS libraries </>",
+        desc: "Listing JavaScript libraries that can be beneficial for developers working on various projects.",
+        icon: <Code className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 9,
-        title: "TheFirstThing 🥇",
-        desc: "Provides information about the first instances of various things that happened in the world.",
-        icon: <Trophy className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Components 🧊",
+        desc: "Web components that developers can easily copy and paste into their projects.",
+        icon: <BoxIcon className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 10,
-        title: "Evolution 🧬",
-        desc: "Platform that explains how various things have evolved over time.",
-        icon: <Dna className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "TheFirstThing 🥇",
+        desc: "Provides information about the first instances of various things that happened in the world.",
+        icon: <Trophy className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 11,
-        title: "TheGoldenGang 🤗",
-        desc: "Social app where users can share details about their friend groups or \"gangs.\"",
-        icon: <Users className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Evolution 🧬",
+        desc: "Platform that explains how various things have evolved over time.",
+        icon: <Dna className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 12,
-        title: "Happiness 😊",
-        desc: "Collection of videos curated to make users laugh and improve their mood.",
-        icon: <Smile className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "TheGoldenGang 🤗",
+        desc: "Social app where users can share details about their friend groups or 'gangs.'",
+        icon: <Users className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 13,
-        title: "Letters 🔠",
-        desc: "Tool to assist users in writing different types of letters, providing templates and examples.",
-        icon: <Mail className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Happiness 😊",
+        desc: "Collection of videos curated to make users laugh and improve their mood.",
+        icon: <Smile className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 14,
-        title: "Birthday 🎂",
-        desc: "Reminder app that helps users remember and track the birthdays of friends, family, or anyone important.",
-        icon: <Cake className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Letters 🔠",
+        desc: "Tool to assist users in writing different types of letters, providing templates and examples.",
+        icon: <Mail className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 15,
-        title: "Search Heroine 👸",
-        desc: "Search tool focused on finding information about heroines.",
-        icon: <Search className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        title: "Birthday 🎂",
+        desc: "Reminder app that helps users remember and track the birthdays of friends, family, or anyone important.",
+        icon: <Cake className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
     {
         id: 16,
+        title: "Search Heroine 👸",
+        desc: "Search tool focused on finding information about heroines.",
+        icon: <Search className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
+    },
+    {
+        id: 17,
         title: "AI Astrologer 🪄",
         desc: "AI-driven platform that provides astrological predictions and insights.",
-        icon: <Wand2 className="h-4 w-4" />
-        , status: "NOTSTARTED"
-        , link: ""
+        icon: <Wand2 className="h-4 w-4" />,
+        status: "NOTSTARTED",
+        link: ""
     },
 ]
+
 
 const statusColors = {
     COMPLETED: "bg-green-500",
